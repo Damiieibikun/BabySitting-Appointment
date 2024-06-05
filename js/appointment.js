@@ -109,12 +109,12 @@ function urgencyFee(){
     let differenceMilisecond = new Date(appointmentDetails.date) - new Date();
     let millisecondsInADay = 1000 * 60 * 60 * 24;
     let dayDifference = Math.floor(differenceMilisecond / millisecondsInADay);
-    if (dayDifference < 7){
+    if (dayDifference < 5){
         rate*=1.2
         
         document.getElementById(
             "urgency"
-          ).innerHTML = `<b> Urgency Fee: </b>Booking Date within 7 days <b>$${(rate/1.2) *0.2}</b>`;
+          ).innerHTML = `<b> Urgency Fee: </b>Booking Date within 5 days <b>$${(rate/1.2) *0.2}</b>`;
 
     }
     else{
@@ -128,3 +128,19 @@ document.getElementById(
   ).innerHTML = `<b>$${urgencyFee()}</b>`
 
 
+  let confirmBooking = document.getElementById('confirm-booking')
+  let hourglass = document.getElementById('hourglass')
+  confirmBooking.addEventListener('click', function() {
+    hourglass.classList.remove('hide')
+    hourglass.classList.add('display')
+    hourglass.addEventListener('animationend', function() {
+        this.classList.add('hide');
+    });
+    setTimeout(function() {
+        let appPage = document.getElementById('appointment-details')
+        
+        appPage.innerHTML = `<h1 class = "confirmText">Booking Confirmed!</h1><br>
+        <h3 class = "confirmTexth3">Thank You for choosing Little Sunshine Sitters</h3>`
+    }, 700)
+
+})

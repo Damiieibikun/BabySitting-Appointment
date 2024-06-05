@@ -319,11 +319,12 @@ label {
 /* appointment details */
 
 #appointment-details{
-    width: 90%;
+    width: 80%;
     margin: auto;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     box-shadow: 2px 2px 2px 2px #dedede46;
+    margin-bottom: 30px;
 }
 #header2, .header3{
     font-family: cursive;
@@ -340,6 +341,7 @@ label {
 #booking-details{
   width: 75%;
   margin: auto;
+  padding-bottom: 20px;
 }
 #client-info, #service-info{
   padding: 20px;
@@ -352,6 +354,40 @@ label {
 #urgency{
   color: red;
 }
+#confirm-booking{
+align-self: center;
+    padding: 15px;
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color: #c99e9d;
+    font-weight: 600;
+    transition: 0.4s all;
+    font-family: cursive;
+    margin-bottom: 10px;
+}
+  
+  #confirm-booking:hover {
+    background-color: #e75480;
+    cursor: pointer;
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+
+.confirmText{
+  font-family: cursive;
+  color: #e75480;
+}
+
+.confirmTexth3{
+  font-family: "Taviraj", serif;
+    font-weight: 200;
+    font-style: normal;
+
+}
+
 
 
 /* footer */
