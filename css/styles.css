@@ -33,26 +33,41 @@ body {
   justify-content: center;
 }
 
-#header {
-  text-align: center;
-  font-family: "Magra", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 60px;
-  color: whitesmoke;
+.gap{
+  gap: 30px;
 }
-#cursive {
-font-family: cursive;
-font-family: "Cedarville Cursive", cursive;
-  font-weight: 400;
-  font-style: normal
+
+/* navigation */
+nav{
+  justify-content: space-around;
 }
-/* #purple {
-  color: purple;
+
+#logo img{
+  width: 95px;
 }
-#blue {
-  color: darkslateblue;
-} */
+
+#links a{
+  text-decoration: none;
+  list-style: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  transition: 0.7s all;
+  -webkit-transition: 0.7s all;
+  -moz-transition: 0.7s all;
+  -ms-transition: 0.7s all;
+  -o-transition: 0.7s all;
+  color: rgb(41, 41, 41);
+}
+#links a:hover{
+  cursor: pointer;
+  background-color: #e2b0afa3;
+  
+}
+
 
 /* hero */
 #hero{
@@ -72,6 +87,21 @@ font-family: "Cedarville Cursive", cursive;
     background-color: #e2b0afa3;
     bottom: 15%;
     right: 0;
+}
+
+#header {
+  text-align: center;
+  font-family: "Magra", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 60px;
+  color: whitesmoke;
+}
+#cursive {
+font-family: cursive;
+font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal
 }
 /* form styles */
 
@@ -202,7 +232,7 @@ label {
   width: 90%;
   margin: auto;
   justify-items: center;
-  gap: 30px;
+  
 }
 
 #sitters-grid p {
@@ -295,4 +325,49 @@ label {
     color: #e75480;
 }
 
-/* #c99e9d */
+/* footer */
+footer{
+  background-color: #e2b0af29;
+  height:50vh;
+  padding: 40px;
+  justify-items: center;
+  
+}
+
+footer p{
+  text-align: center;
+}
+
+#opening-hours{
+  background-color: white;
+  border-top-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 30px;
+  box-shadow: 2px 2px 2px 2px #dedede46;
+  text-align: center;
+}
+
+#opening-hours p, 
+#contacts-info p{
+  font-weight: 500;
+}
+
+#opening-hours li{
+  list-style: none;
+  
+}
+#opening-hours ul{
+  padding: 0;
+}
+
+#footer-logo{
+  width: 130px;
+}
+
+#contacts-info{
+  background-color: white;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 30px;
+  box-shadow: 2px 2px 2px 2px #dedede46;
+}

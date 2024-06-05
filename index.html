@@ -12,12 +12,27 @@
 </head>
 
 <body>
-    <nav>
-        <div id="logo"></div>
-        <ul id="links">
-            <li></li>
-
-        </ul>
+    <nav class="flex align-center">
+        <div id="logo"><img src="images/logos/logo.png" alt=""></div>
+        <div class="flex gap">
+            <ul id="links" class="flex">
+                <a href="index.html"><li>Home</li></a>
+                <a href="#form-info"><li>Book An Appointment</li></a>
+                
+            </ul>
+            <div class="flex justify-center align-center">
+                <img src="images/logos/viber.png" alt="">&nbsp;&nbsp;
+                <span>Call</span>
+                <br>
+                <span>+(123) 456 789</span>
+            </div>
+            <div class="flex justify-center align-center">
+                <img src="images/logos/pin.png" alt="">&nbsp;&nbsp;<span>Address</span>
+                <br>
+                <span>123 Somewhere, SomeCity SomePlace</span>
+            </div>
+        </div>
+        
     </nav>
     <section id="hero">
         <div id="hero-header">
@@ -32,7 +47,7 @@
         <div id="banner1">
             <div class="overlay flex-col justify-center align-center">
                 <h2>Book a Siiter</h2>
-                <img src="images/arrow-right.png" alt="">
+                <img src="images/logos/arrow-right.png" alt="">
 
             </div>
         </div>
@@ -102,16 +117,69 @@
             <br>
             <button class="hide" id="submit" type="button">Check Avaliable Sitters</button>
             <br>
-            <img src="images/wait.png" alt="wait" class="hide" id="hourglass">
+            <img src="images/logos/wait.png" alt="wait" class="hide" id="hourglass">
         </form>
     </section>
     <section id="sitters" class="hide">
         <h1>View Our Avaliable Sitters</h1>
         <p id="service-selected"></p>
-        <div id="sitters-grid" class="grid-3fr">
+        <div id="sitters-grid" class="grid-3fr gap">
             <!-- Insert Grid items -->
         </div>
     </section>
+<footer class="grid-3fr">
+    <div class="flex-col align-center">
+        <img src="images/logos/logo.png" alt="" id="footer-logo">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, quod!</p>
+        <div class="socials flex gap justify-center align-center">
+            <img src="images/logos/facebook.png" alt="">
+            <img src="images/logos/instagram.png" alt="">
+            <img src="images/logos/twitter.png" alt="">
+        </div>
+        <p>&copy; CopyRight Little Sunshine Sitters 2024</p>
+    </div>
+    <div id="contacts-info" class="flex-col gap">
+        <p>Our Contacts</p>
+        <div><img src="images/logos/viber.png" alt="">
+            &nbsp;&nbsp;
+            <span>Call: +(123) 456 789</span></div>
+        <div><img src="images/logos/email.png" alt="">
+            &nbsp;&nbsp;
+            <span>Email: littlesunshinesitter@somemail.com</span></div>
+        <div><img src="images/logos/pin.png" alt="">
+            &nbsp;&nbsp;
+            <span>Visit Us: 123 Somewhere, SomeCity SomePlace</span></div>
+    </div>
+    <div id="opening-hours">
+        <p>Opening Hours</p>
+        <div id="opening-hours-info" class="grid-3fr">
+            <div>
+                <ul>
+                    <li>Mon-Fri</li>
+                    <li>Saturday</li>
+                    <li>Sunday</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>.......</li>
+                    <li>.......</li>
+                    <li>.......</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>8am - 7pm</li>
+                    <li>9am - 5pm</li>
+                    <li>Closed</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+
 
     <script src=" js/script.js "></script>
 </body>

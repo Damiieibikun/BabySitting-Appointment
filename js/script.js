@@ -274,7 +274,7 @@ function clicked(event) {
     sitterChosen = event.target.id
     localStorage.setItem('Sitter', sitterChosen)
     let waitImg = document.createElement('img')
-    waitImg.setAttribute('src', 'images/wait.png')
+    waitImg.setAttribute('src', 'images/logos/wait.png')
     waitImg.id = 'hourglass'
     waitImg.classList.add('waitSitters')
       document.getElementById(sitterChosen).appendChild(waitImg)
