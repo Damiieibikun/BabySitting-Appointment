@@ -291,6 +291,11 @@ label {
   grid-template-columns: 1fr;
 }
 
+.grid-2fr{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .grid-row1fr {
   display: grid;
   grid-template-rows: 1fr;
@@ -320,10 +325,31 @@ label {
     border-top-right-radius: 20px;
     box-shadow: 2px 2px 2px 2px #dedede46;
 }
-#header2{
+#header2, .header3{
     font-family: cursive;
     color: #e75480;
 }
+
+
+.header3{
+  background-color: #d9b5722b;
+  padding: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+#booking-details{
+  width: 75%;
+  margin: auto;
+}
+#client-info, #service-info{
+  padding: 20px;
+  
+}
+.bold{
+  font-weight: 500;
+}
+
+
 
 /* footer */
 footer{

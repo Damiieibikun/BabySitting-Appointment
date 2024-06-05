@@ -1,99 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Little Sunshine Sitters - Appointment Details</title>
-    <link href="https://fonts.googleapis.com/css2?family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Magra:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Magra:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-<body>
+  <body>
     <nav class="flex align-center">
-        <div id="logo"><img src="images/logos/logo.png" alt=""></div>
-        <div class="flex gap">
-            <ul id="links" class="flex">
-                <a href="index.html"><li>Home</li></a>
-                <a href="#form-info"><li>Book An Appointment</li></a>
-                
-            </ul>
-            <div class="flex justify-center align-center">
-                <img src="images/logos/viber.png" alt="">&nbsp;&nbsp;
-                <span>Call</span>
-                <br>
-                <span>+(123) 456 789</span>
-            </div>
-            <div class="flex justify-center align-center">
-                <img src="images/logos/pin.png" alt="">&nbsp;&nbsp;<span>Address</span>
-                <br>
-                <span>123 Somewhere, SomeCity SomePlace</span>
-            </div>
+      <div id="logo"><img src="images/logos/logo.png" alt="" /></div>
+      <div class="flex gap">
+        <ul id="links" class="flex">
+          <a href="index.html"><li>Home</li></a>
+          <a href="index.html#form-info"><li>Book An Appointment</li></a>
+        </ul>
+        <div class="flex justify-center align-center">
+          <img src="images/logos/viber.png" alt="" />&nbsp;&nbsp;
+          <span>Call</span>
+          <br />
+          <span>+(123) 456 789</span>
         </div>
-        
+        <div class="flex justify-center align-center">
+          <img src="images/logos/pin.png" alt="" />&nbsp;&nbsp;<span
+            >Address</span
+          >
+          <br />
+          <span>123 Somewhere, SomeCity SomePlace</span>
+        </div>
+      </div>
     </nav>
+
     <section id="appointment-details">
-        <h1 id="header2">View your Booking details</h1>
-        <p id="service-selected"></p>
-        <p id="sitter-selected"></p>
-    
+      <h1 id="header2">Booking details</h1>
+      <p id="client-name"></p>
+      <p>
+        Thank you for booking with us! <br />
+        Below are your booking details:
+      </p>
+
+      <div id="booking-details">
+        <div id="client-info">
+          <h3 class="header3">Client Details</h3>
+          <div id="client-infogrid" class="grid-2fr">
+            <div class="flex-col gap">
+              <div>
+                <span class="bold">Parent/Guardian Name: </span
+                ><span id="guardian-name"></span>
+              </div>
+              <div>
+                <span class="bold">Parent/Guardian Number: </span
+                ><span id="guardian-number"></span>
+              </div>
+              <div>
+                <span class="bold">Parent/Guardian Email: </span
+                ><span id="guardian-email"></span>
+              </div>
+            </div>
+            <div class="flex-col gap">
+              <div>
+                <span class="bold">Child's Name: </span
+                ><span id="child-name"></span>
+              </div>
+              <div>
+                <span class="bold">Child's Age: </span
+                ><span id="child-age"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="service-info">
+          <h3 class="header3">Appointment Details</h3>
+          <div id="service-infogrid" class="grid-2fr">
+            <div class="flex-col gap">
+              <div>
+                <span class="bold">Type of Service: </span
+                ><span id="service-selected"></span>
+              </div>
+              <div>
+                <span class="bold">Sitter's Name: </span
+                ><span id="sitter-selected"></span>
+              </div>
+            </div>
+            <div class="flex-col gap">
+              <div>
+                <span class="bold">Date Booked: </span
+                ><span id="date-selected"></span>
+              </div>
+              <div>
+                <span class="bold">Time: </span><span id="time-selected"></span>
+              </div>
+              <div>
+                <span class="bold">Duration: </span
+                ><span id="duration-selected"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    
 
     <footer class="grid-3fr">
-        <div class="flex-col align-center">
-            <img src="images/logos/logo.png" alt="" id="footer-logo">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, quod!</p>
-            <div class="socials flex gap justify-center align-center">
-                <img src="images/logos/facebook.png" alt="">
-                <img src="images/logos/instagram.png" alt="">
-                <img src="images/logos/twitter.png" alt="">
-            </div>
-            <p>&copy; CopyRight Little Sunshine Sitters 2024</p>
+      <div class="flex-col align-center">
+        <img src="images/logos/logo.png" alt="" id="footer-logo" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt,
+          quod!
+        </p>
+        <div class="socials flex gap justify-center align-center">
+          <img src="images/logos/facebook.png" alt="" />
+          <img src="images/logos/instagram.png" alt="" />
+          <img src="images/logos/twitter.png" alt="" />
         </div>
-        <div id="contacts-info" class="flex-col gap">
-            <p>Our Contacts</p>
-            <div><img src="images/logos/viber.png" alt="">
-                &nbsp;&nbsp;
-                <span>Call: +(123) 456 789</span></div>
-            <div><img src="images/logos/email.png" alt="">
-                &nbsp;&nbsp;
-                <span>Email: littlesunshinesitter@somemail.com</span></div>
-            <div><img src="images/logos/pin.png" alt="">
-                &nbsp;&nbsp;
-                <span>Visit Us: 123 Somewhere, SomeCity SomePlace</span></div>
+        <p>&copy; CopyRight Little Sunshine Sitters 2024</p>
+      </div>
+      <div id="contacts-info" class="flex-col gap">
+        <p>Our Contacts</p>
+        <div>
+          <img src="images/logos/viber.png" alt="" />
+          &nbsp;&nbsp;
+          <span>Call: +(123) 456 789</span>
         </div>
-        <div id="opening-hours">
-            <p>Opening Hours</p>
-            <div id="opening-hours-info" class="grid-3fr">
-                <div>
-                    <ul>
-                        <li>Mon-Fri</li>
-                        <li>Saturday</li>
-                        <li>Sunday</li>
-                    </ul>
-                </div>
-                <div>
-                    <ul>
-                        <li>.......</li>
-                        <li>.......</li>
-                        <li>.......</li>
-                    </ul>
-                </div>
-                <div>
-                    <ul>
-                        <li>8am - 7pm</li>
-                        <li>9am - 5pm</li>
-                        <li>Closed</li>
-                    </ul>
-                </div>
-            </div>
+        <div>
+          <img src="images/logos/email.png" alt="" />
+          &nbsp;&nbsp;
+          <span>Email: littlesunshinesitter@somemail.com</span>
         </div>
-    
+        <div>
+          <img src="images/logos/pin.png" alt="" />
+          &nbsp;&nbsp;
+          <span>Visit Us: 123 Somewhere, SomeCity SomePlace</span>
+        </div>
+      </div>
+      <div id="opening-hours">
+        <p>Opening Hours</p>
+        <div id="opening-hours-info" class="grid-3fr">
+          <div>
+            <ul>
+              <li>Mon-Fri</li>
+              <li>Saturday</li>
+              <li>Sunday</li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li>.......</li>
+              <li>.......</li>
+              <li>.......</li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li>8am - 7pm</li>
+              <li>9am - 5pm</li>
+              <li>Closed</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </footer>
     <script src="js/appointment.js"></script>
-</body>
-
+  </body>
 </html>
