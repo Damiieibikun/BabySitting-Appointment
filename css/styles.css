@@ -36,19 +36,42 @@ body {
 #header {
   text-align: center;
   font-family: "Magra", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-style: normal;
   font-size: 60px;
-  margin-bottom: 0;
+  color: whitesmoke;
 }
-#pink {
-  color: #e75480;
+#cursive {
+font-family: cursive;
+font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal
 }
-#purple {
+/* #purple {
   color: purple;
 }
 #blue {
   color: darkslateblue;
+} */
+
+/* hero */
+#hero{
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../images/banner3.png");
+  height: 100vh;
+  position: relative;
+  
+}
+
+#hero-header{
+    position: absolute;
+    width: 80%;
+    height: 25%;
+    background-color: #e2b0afa3;
+    bottom: 15%;
+    right: 0;
 }
 /* form styles */
 
@@ -65,7 +88,7 @@ body {
   position: relative;
 }
 
-#overlay {
+.overlay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -73,13 +96,13 @@ body {
   color: white;
 }
 
-#overlay h2 {
+.overlay h2 {
   font-family: "Magra", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-style: normal;
   font-size: 50px;
 }
-#overlay img {
+.overlay img {
   position: relative;
   animation: point infinite 1s ease-in-out;
 }
@@ -107,7 +130,7 @@ select {
   padding: 15px;
   border: none;
   color: rgb(255, 255, 255);
-  background-color: darkblue;
+  background-color: #c99e9d;
   font-weight: 600;
   transition: 0.4s all;
   font-family: cursive;
@@ -120,7 +143,7 @@ select {
 }
 
 label {
-  color: darkblue;
+  color: #c99e9d;
   font-family: cursive;
 }
 
@@ -166,7 +189,7 @@ label {
 }
 
 #sitters h1 {
-  color: purple;
+  color: #c99e9d;
   font-family: cursive;
 }
 
@@ -215,7 +238,7 @@ label {
 
 .book-sitter {
   padding: 15px;
-  background-color: purple;
+  background-color: #c99e9d;
   color: white;
   border: none;
   font-family: cursive;
@@ -257,3 +280,19 @@ label {
     position: absolute;
     bottom: -75px;
 }
+
+/* appointment details */
+
+#appointment-details{
+    width: 90%;
+    margin: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 2px 2px 2px 2px #dedede46;
+}
+#header2{
+    font-family: cursive;
+    color: #e75480;
+}
+
+/* #c99e9d */
