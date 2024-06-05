@@ -1,0 +1,259 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Taviraj", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+/* common styles */
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+#header {
+  text-align: center;
+  font-family: "Magra", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 60px;
+  margin-bottom: 0;
+}
+#pink {
+  color: #e75480;
+}
+#purple {
+  color: purple;
+}
+#blue {
+  color: darkslateblue;
+}
+/* form styles */
+
+#form-info {
+  grid-template-columns: repeat(2, 1fr);
+  padding: 40px;
+}
+
+#banner1 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../images/banner1.jpg");
+  position: relative;
+}
+
+#overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #0000007a;
+  color: white;
+}
+
+#overlay h2 {
+  font-family: "Magra", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 50px;
+}
+#overlay img {
+  position: relative;
+  animation: point infinite 1s ease-in-out;
+}
+
+@keyframes point {
+  0% {
+    left: 0px;
+  }
+  100% {
+    left: 20px;
+  }
+}
+#Appointment-Form {
+  box-shadow: 2px 3px 2px 0 rgba(128, 128, 128, 0.429);
+  padding: 30px;
+}
+
+input,
+select {
+  padding: 10px 20px;
+  border: 0.5px solid rgba(128, 128, 128, 0.342);
+}
+
+#submit {
+  padding: 15px;
+  border: none;
+  color: rgb(255, 255, 255);
+  background-color: darkblue;
+  font-weight: 600;
+  transition: 0.4s all;
+  font-family: cursive;
+}
+
+#submit:hover {
+  background-color: #e75480;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+label {
+  color: darkblue;
+  font-family: cursive;
+}
+
+#hourglass {
+  align-self: center;
+  animation: spin 0.7s linear;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(180deg);
+    visibility: hidden;
+  }
+}
+/* error styles */
+
+.display {
+  display: block;
+}
+
+.display-inline {
+  display: inline;
+}
+
+.hide {
+  display: none;
+}
+
+.error-border {
+  box-shadow: 0px 0px 10px 2px rgb(213, 0, 64);
+}
+
+.error-msg {
+  color: rgb(213, 0, 64);
+  font-size: 13px;
+  margin: 0 0 10px 0;
+}
+/* Sitters info */
+
+#sitters {
+  text-align: center;
+  padding: 30px;
+}
+
+#sitters h1 {
+  color: purple;
+  font-family: cursive;
+}
+
+#sitters p {
+  font-weight: 600;
+  font-family: cursive;
+}
+
+#sitters-grid {
+  width: 90%;
+  margin: auto;
+  justify-items: center;
+  gap: 30px;
+}
+
+#sitters-grid p {
+  margin: 10px 0 0 0;
+}
+
+#sitters-grid ul {
+  padding: 0;
+}
+
+#sitters-grid ul li {
+  list-style: none;
+  font-weight: 200;
+}
+
+#no-sitter {
+  font-size: 30px;
+  font-weight: 300;
+  font-family: cursive;
+  color: #e75480;
+}
+
+#sitter-name {
+  font-size: 25px;
+  font-family: cursive;
+}
+
+.sitter-items {
+  box-shadow: 2px 2px 2px 2px #dedede46;
+  padding: 20px;
+  position: relative;
+}
+
+.book-sitter {
+  padding: 15px;
+  background-color: purple;
+  color: white;
+  border: none;
+  font-family: cursive;
+  transition: 0.3s all;
+}
+
+.book-sitter:hover {
+  background-color: #e75480;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.grid-3fr {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-1fr {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.grid-row1fr {
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+.sitter-images {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  align-self: center;
+}
+
+.waitSitters{
+    justify-self: center;
+    position: absolute;
+    bottom: -75px;
+}

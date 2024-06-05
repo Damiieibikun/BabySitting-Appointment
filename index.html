@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Sunshine Sitters- Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Magra:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <h1 id="header"><span id="pink">Little.</span> <span id="purple">Sunshine.</span> <span id="blue">Sitters.</span></h1>
+    <section id="form-info" class="grid">
+        <div id="banner1">
+            <div id="overlay" class="flex-col justify-center align-center">
+                <h2>Book a Siiter</h2>
+                <img src="images/arrow-right.png" alt="">
+
+            </div>
+        </div>
+
+        <form action="" id="Appointment-Form" class="flex-col">
+            <p id="error-msg" class="hide">Empty Fields</p>
+            <div id="parents-section" class="flex-col">
+                <label for="">Parents Details:</label>
+                <br>
+                <input type="text" name="" placeholder="Enter Full Name" id="guardian-name" oninput="emptyFields(event)">
+                <br>
+                <p class="hide">Enter a valid number</p>
+                <input type="text" name="" placeholder="Phone Number" id="phone" oninput="emptyFields(event)">
+                <br>
+                <p class="hide">Enter a valid Email Address</p>
+                <input type="text" name="" placeholder="Email" id="email" oninput="emptyFields(event)">
+            </div>
+            <br>
+            <div id="child-section" class="flex-col">
+                <label for="">Child's Details:</label>
+                <br>
+                <input type="text" name="" placeholder="Enter Full Name" id="child-name" oninput="emptyFields(event)">
+                <br>
+                <select name="" id="age" oninput="emptyFields(event)">
+                    <option value="">Select Age</option>
+                    <option value="0">Below 1 years</option>
+                    <option value="1">1 year</option>
+                    <option value="2">2 years</option>
+                    <option value="3">3 years</option>
+                    <option value="4">4 years</option>
+                    <option value="5">5 years</option>
+                    <option value="6">6 years</option>
+                    <option value="7">7 years</option>
+                    <option value="8">8 years</option>
+                    <option value="9">9 years</option>
+                    <option value="10">10 years</option>
+                    <option value="11">11 years</option>
+                    <option value="12">12 years</option>
+                    <option value="13">13 years</option>
+                    <option value="14">Above 13 years</option>
+                </select>
+
+            </div>
+            <br>
+            <div id="service-details">
+                <label for="">Select Date and Time for Service:</label>
+                <br><br>
+                <input type="date" name="" id="date" oninput="emptyFields(event)"> <input type="time" id="time" name="time" oninput="emptyFields(event)">
+                <br><br>
+                <select name="" id="duration" oninput="emptyFields(event)">
+                    <option value="">Select duration for service</option>
+                    <option value="0">Less than 1 week</option>
+                    <option value="1">1 week</option>
+                    <option value="2">2 weeks</option>
+                    <option value="3">3 weeks</option>
+                    <option value="4">1 month</option>
+                    <option value="5">Monthly</option>
+                </select>
+                <br><br>
+                <select name="" id="service-type" oninput="emptyFields(event)">
+                    <option value="">Select service type</option>
+                    <option value="Day">Day time</option>
+                    <option value="Evening">Evening</option>
+                    <option value="Overnight">Overnight</option>
+                </select>
+            </div>
+            <br>
+            <button class="hide" id="submit" type="button">Check Avaliable Sitters</button>
+            <br>
+            <img src="images/wait.png" alt="wait" class="hide" id="hourglass">
+        </form>
+    </section>
+
+    <section id="sitters" class="hide">
+        <h1>View Our Avaliable Sitters</h1>
+        <p id="service-selected"></p>
+        <div id="sitters-grid" class="grid-3fr">
+            <!-- Insert Grid items -->
+        </div>
+    </section>
+
+
+
+    <script src=" js/script.js "></script>
+</body>
+
+</html>
+
+</html>
