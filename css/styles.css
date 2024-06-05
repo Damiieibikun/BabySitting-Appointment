@@ -393,7 +393,7 @@ align-self: center;
 /* footer */
 footer{
   background-color: #e2b0af29;
-  height:50vh;
+  /* height:50vh; */
   padding: 40px;
   justify-items: center;
   
@@ -435,4 +435,49 @@ footer p{
   border-bottom-left-radius: 20px;
   padding: 30px;
   box-shadow: 2px 2px 2px 2px #dedede46;
+}
+
+/* media queries */
+@media screen and (max-width: 1040px){
+  footer.grid-3fr{
+  grid-template-columns: 1fr;
+  gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  #client-infogrid.grid-2fr,
+  #service-infogrid.grid-2fr{
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 760px){
+  #form-info{
+    grid-template-columns: 1fr;
+  }
+  #banner1{
+    display: none;
+  }
+  #header{
+    font-size: 30px
+  }
+  footer{
+    padding: 12px;
+  }
+}
+
+@media screen and (max-width: 320px){
+  #Appointment-from{
+    padding: 7px;
+  }
+  #form-info{
+    padding: 10px;
+  }
+
+  #opening-hours, 
+#contacts-info{
+  padding: 6px;
+}
 }
