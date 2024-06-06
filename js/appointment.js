@@ -1,3 +1,13 @@
+//Function for Collapsed menu
+document
+  .getElementById("collapsed-menu")
+  .addEventListener("click", function () {
+    document
+      .getElementsByClassName("nav-items")[0]
+      .classList.toggle("toggle-nav");
+  });
+
+//get items from local storage
 let appointmentDetails = JSON.parse(
   localStorage.getItem("Appointment-details")
 );
@@ -69,78 +79,70 @@ function childRate() {
   return rate;
 }
 
+function durationRate() {
+  let rate = childRate();
+  if (appointmentDetails.duration === "1 week") {
+    rate *= 7;
+    document.getElementById(
+      "cost-durationinfo"
+    ).innerHTML = `<b> ${appointmentDetails.duration}</b>: <b>$${rate}</b>`;
+  } else if (appointmentDetails.duration === "2 weeks") {
+    rate *= 14;
+    document.getElementById(
+      "cost-durationinfo"
+    ).innerHTML = `<b> ${appointmentDetails.duration}</b>: <b>$${rate}</b>`;
+  } else if (appointmentDetails.duration === "3 weeks") {
+    rate *= 21;
+    document.getElementById(
+      "cost-durationinfo"
+    ).innerHTML = `<b> ${appointmentDetails.duration}</b>: <b>$${rate}</b>`;
+  } else if (appointmentDetails.duration === "1 month") {
+    rate *= 30;
+    document.getElementById(
+      "cost-durationinfo"
+    ).innerHTML = `<b> ${appointmentDetails.duration}</b>: <b>$${rate}</b>`;
+  }
 
-function durationRate(){
-    let rate = childRate()
-    if(appointmentDetails.duration === '1 week'){
-        rate *= 7
-        document.getElementById(
-            "cost-durationinfo"
-          ).innerHTML = `<b> ${appointmentDetails.duration}</b>: <b>$${rate}</b>`;
-    }
-    else if(appointmentDetails.duration === '2 weeks'){
-        rate*=14
-        document.getElementById(
-            "cost-durationinfo"
-          ).innerHTML = `<b> ${appointmentDetails.duration}</b>: <b>$${rate}</b>`;
-    }
-    else if(appointmentDetails.duration === '3 weeks'){
-        rate*=21
-        document.getElementById(
-            "cost-durationinfo"
-          ).innerHTML = `<b> ${appointmentDetails.duration}</b>: <b>$${rate}</b>`;
-    }
-    else if(appointmentDetails.duration === '1 month'){
-        rate*=30
-        document.getElementById(
-            "cost-durationinfo"
-          ).innerHTML = `<b> ${appointmentDetails.duration}</b>: <b>$${rate}</b>`;
-    }
-
-    return rate
-
+  return rate;
 }
 
 // console.log(durationRate());
 
-function urgencyFee(){
-    let rate = durationRate()
-   
-    let differenceMilisecond = new Date(appointmentDetails.date) - new Date();
-    let millisecondsInADay = 1000 * 60 * 60 * 24;
-    let dayDifference = Math.floor(differenceMilisecond / millisecondsInADay);
-    if (dayDifference < 5){
-        rate*=1.2
-        
-        document.getElementById(
-            "urgency"
-          ).innerHTML = `<b> Urgency Fee: </b>Booking Date within 5 days <b>$${(rate/1.2) *0.2}</b>`;
+function urgencyFee() {
+  let rate = durationRate();
 
-    }
-    else{
-        rate = rate
-    }
-    return rate
+  let differenceMilisecond = new Date(appointmentDetails.date) - new Date();
+  let millisecondsInADay = 1000 * 60 * 60 * 24;
+  let dayDifference = Math.floor(differenceMilisecond / millisecondsInADay);
+  if (dayDifference < 5) {
+    rate *= 1.2;
+
+    document.getElementById(
+      "urgency"
+    ).innerHTML = `<b> Urgency Fee: </b>Booking Date within 5 days <b>$${
+      (rate / 1.2) * 0.2
+    }</b>`;
+  } else {
+    rate = rate;
+  }
+  return rate;
 }
 
-document.getElementById(
-    "total-cost"
-  ).innerHTML = `<b>$${urgencyFee()}</b>`
+document.getElementById("total-cost").innerHTML = `<b>$${urgencyFee()}</b>`;
 
+let confirmBooking = document.getElementById("confirm-booking");
+let hourglass = document.getElementById("hourglass");
+confirmBooking.addEventListener("click", function () {
+  hourglass.classList.remove("hide");
+  hourglass.classList.add("display");
+  hourglass.addEventListener("animationend", function () {
+    this.classList.add("hide");
+  });
+  setTimeout(function () {
+    let appPage = document.getElementById("appointment-details");
+    appPage.classList.add('flex-col', 'justify-center', 'align-center')
 
-  let confirmBooking = document.getElementById('confirm-booking')
-  let hourglass = document.getElementById('hourglass')
-  confirmBooking.addEventListener('click', function() {
-    hourglass.classList.remove('hide')
-    hourglass.classList.add('display')
-    hourglass.addEventListener('animationend', function() {
-        this.classList.add('hide');
-    });
-    setTimeout(function() {
-        let appPage = document.getElementById('appointment-details')
-        
-        appPage.innerHTML = `<h1 class = "confirmText">Booking Confirmed!</h1><br>
-        <h3 class = "confirmTexth3">Thank You for choosing Little Sunshine Sitters</h3>`
-    }, 700)
-
-})
+    appPage.innerHTML = `<h1 class = "confirmText">Booking Confirmed!</h1><br>
+        <h3 class = "confirmTexth3">Thank You for choosing Little Sunshine Sitters!</h3>`;
+  }, 700);
+});

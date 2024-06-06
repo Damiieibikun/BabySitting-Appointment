@@ -28,25 +28,29 @@ body {
 .align-center {
   align-items: center;
 }
+.align-start {
+  align-items: start;
+}
 
 .justify-center {
   justify-content: center;
 }
 
-.gap{
+.gap {
   gap: 30px;
 }
 
 /* navigation */
-nav{
+nav {
   justify-content: space-around;
+  padding-top: 10px;
 }
 
-#logo img{
+#logo img {
   width: 95px;
 }
 
-#links a{
+#links a {
   text-decoration: none;
   list-style: none;
   padding: 10px 20px;
@@ -62,31 +66,37 @@ nav{
   -o-transition: 0.7s all;
   color: rgb(41, 41, 41);
 }
-#links a:hover{
+#links a:hover {
   cursor: pointer;
   background-color: #e2b0afa3;
-  
 }
 
+#links {
+  padding: 0;
+}
+
+#collapsed-menu {
+  background-color: #c99e9dab;
+  padding: 10px 0;
+}
 
 /* hero */
-#hero{
-    background-position: center;
+#hero {
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("../images/banner3.png");
   height: 100vh;
   position: relative;
-  
 }
 
-#hero-header{
-    position: absolute;
-    width: 80%;
-    height: 25%;
-    background-color: #e2b0afa3;
-    bottom: 15%;
-    right: 0;
+#hero-header {
+  position: absolute;
+  width: 80%;
+  height: 25%;
+  background-color: #e2b0afa3;
+  bottom: 15%;
+  right: 0;
 }
 
 #header {
@@ -98,10 +108,10 @@ nav{
   color: whitesmoke;
 }
 #cursive {
-font-family: cursive;
-font-family: "Cedarville Cursive", cursive;
+  font-family: cursive;
+  font-family: "Cedarville Cursive", cursive;
   font-weight: 400;
-  font-style: normal
+  font-style: normal;
 }
 /* form styles */
 
@@ -232,7 +242,6 @@ label {
   width: 90%;
   margin: auto;
   justify-items: center;
-  
 }
 
 #sitters-grid p {
@@ -291,7 +300,7 @@ label {
   grid-template-columns: 1fr;
 }
 
-.grid-2fr{
+.grid-2fr {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -310,100 +319,100 @@ label {
   align-self: center;
 }
 
-.waitSitters{
-    justify-self: center;
-    position: absolute;
-    bottom: -75px;
+.waitSitters {
+  justify-self: center;
+  position: absolute;
+  bottom: -75px;
 }
 
 /* appointment details */
 
-#appointment-details{
-    width: 80%;
-    margin: auto;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    box-shadow: 2px 2px 2px 2px #dedede46;
-    margin-bottom: 30px;
+#appointment-details {
+  width: 80%;
+  margin: auto;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 2px 2px 2px 2px #dedede46;
+  margin-bottom: 30px;
+  min-height: 50vh;
 }
-#header2, .header3{
-    font-family: cursive;
-    color: #e75480;
+#header2,
+.header3 {
+  font-family: cursive;
+  color: #e75480;
 }
 
-
-.header3{
+.header3 {
   background-color: #d9b5722b;
   padding: 20px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-#booking-details{
+#booking-details {
   width: 75%;
   margin: auto;
   padding-bottom: 20px;
 }
-#client-info, #service-info{
+#client-info,
+#service-info {
   padding: 20px;
-  
 }
-.bold{
+.bold {
   font-weight: 500;
 }
 
-#urgency{
+#urgency {
   color: red;
 }
-#confirm-booking{
-align-self: center;
-    padding: 15px;
-    border: none;
-    color: rgb(255, 255, 255);
-    background-color: #c99e9d;
-    font-weight: 600;
-    transition: 0.4s all;
-    font-family: cursive;
-    margin-bottom: 10px;
-}
-  
-  #confirm-booking:hover {
-    background-color: #e75480;
-    cursor: pointer;
-    transform: scale(1.05);
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    -o-transform: scale(1.05);
+#confirm-booking {
+  align-self: center;
+  padding: 15px;
+  border: none;
+  color: rgb(255, 255, 255);
+  background-color: #c99e9d;
+  font-weight: 600;
+  transition: 0.4s all;
+  font-family: cursive;
+  margin-bottom: 10px;
 }
 
-.confirmText{
+#confirm-booking:hover {
+  background-color: #e75480;
+  cursor: pointer;
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+
+.confirmText {
   font-family: cursive;
   color: #e75480;
+  text-align: center;
+  font-size: 40px;
 }
 
-.confirmTexth3{
+.confirmTexth3 {
   font-family: "Taviraj", serif;
-    font-weight: 200;
-    font-style: normal;
-
-}
-
-
-
-/* footer */
-footer{
-  background-color: #e2b0af29;
-  /* height:50vh; */
-  padding: 40px;
-  justify-items: center;
-  
-}
-
-footer p{
+  font-weight: 200;
+  font-style: normal;
   text-align: center;
 }
 
-#opening-hours{
+/* footer */
+footer {
+  background-color: #e2b0af29;
+
+  padding: 40px;
+  justify-items: center;
+}
+
+footer p {
+  text-align: center;
+}
+
+#opening-hours {
   background-color: white;
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -412,24 +421,23 @@ footer p{
   text-align: center;
 }
 
-#opening-hours p, 
-#contacts-info p{
+#opening-hours p,
+#contacts-info p {
   font-weight: 500;
 }
 
-#opening-hours li{
+#opening-hours li {
   list-style: none;
-  
 }
-#opening-hours ul{
+#opening-hours ul {
   padding: 0;
 }
 
-#footer-logo{
+#footer-logo {
   width: 130px;
 }
 
-#contacts-info{
+#contacts-info {
   background-color: white;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -438,46 +446,73 @@ footer p{
 }
 
 /* media queries */
-@media screen and (max-width: 1040px){
-  footer.grid-3fr{
-  grid-template-columns: 1fr;
-  gap: 20px;
-  }
-}
-
-@media screen and (max-width: 768px){
-  #client-infogrid.grid-2fr,
-  #service-infogrid.grid-2fr{
+@media screen and (max-width: 1040px) {
+  footer.grid-3fr {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 }
 
-@media screen and (max-width: 760px){
-  #form-info{
+@media screen and (max-width: 865px) {
+  #collapsed-menu.hide {
+    display: flex;
+  }
+
+  #links.flex {
+    flex-direction: column;
+  }
+  .nav-items {
+    width: 150px;
+    max-height: 35px;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 1s ease-in-out;
+    -webkit-transition: max-height 1s ease-in-out;
+    -moz-transition: max-height 1s ease-in-out;
+    -ms-transition: max-height 1s ease-in-out;
+    -o-transition: max-height 1s ease-in-out;
+  }
+  .toggle-nav {
+    max-height: 500px;
+  }
+  .nav-items.flex {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #client-infogrid.grid-2fr,
+  #service-infogrid.grid-2fr {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  #form-info {
     grid-template-columns: 1fr;
   }
-  #banner1{
+  #banner1 {
     display: none;
   }
-  #header{
-    font-size: 30px
+  #header {
+    font-size: 30px;
   }
-  footer{
+  footer {
     padding: 12px;
   }
 }
 
-@media screen and (max-width: 320px){
-  #Appointment-from{
+@media screen and (max-width: 320px) {
+  #Appointment-from {
     padding: 7px;
   }
-  #form-info{
+  #form-info {
     padding: 10px;
   }
 
-  #opening-hours, 
-#contacts-info{
-  padding: 6px;
-}
+  #opening-hours,
+  #contacts-info {
+    padding: 6px;
+  }
 }

@@ -1,187 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Little Sunshine Sitters- Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Magra:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Magra:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-<body>
+  <body>
     <nav class="flex align-center">
-        <div id="logo"><img src="images/logos/logo.png" alt=""></div>
-        <div class="flex gap">
-            <ul id="links" class="flex">
-                <a href="index.html"><li>Home</li></a>
-                <a href="index.html#form-info"><li>Book An Appointment</li></a>
-                
-            </ul>
-            <div class="flex justify-center align-center">
-                <img src="images/logos/viber.png" alt="">&nbsp;&nbsp;
-                <span>Call</span>
-                <br>
-                <span>+(123) 456 789</span>
-            </div>
-            <div class="flex justify-center align-center">
-                <img src="images/logos/pin.png" alt="">&nbsp;&nbsp;<span>Address</span>
-                <br>
-                <span>123 Somewhere, SomeCity SomePlace</span>
-            </div>
+      <div id="logo"><img src="images/logos/logo.png" alt="" /></div>
+
+      <div class="nav-items flex gap">
+        <div id="collapsed-menu" class="hide flex justify-center align-center">
+          <img src="images/logos/menu.png" alt="" />
         </div>
-        
+        <ul id="links" class="flex">
+          <a href="index.html"><li>Home</li></a>
+          <a href="index.html#form-info"><li>Book An Appointment</li></a>
+        </ul>
+        <div class="flex-col align-start">
+          <div class="flex justify-center align-center">
+            <img src="images/logos/viber.png" alt="" />&nbsp;&nbsp;
+            <span>Call</span>
+          </div>
+          <span>+(123) 456 789</span>
+        </div>
+        <div class="flex-col align-start">
+          <div class="flex justify-center align-center">
+            <img src="images/logos/pin.png" alt="" />&nbsp;&nbsp;<span
+              >Address</span
+            >
+            <br />
+          </div>
+          <span>123 Somewhere, SomeCity SomePlace</span>
+        </div>
+      </div>
     </nav>
     <section id="hero">
-        <div id="hero-header">
-            <h1 id="header">
-                <span>Little.</span> 
-                <span id="cursive">Sunshine.</span> 
-                <span>Sitters.</span>
-            </h1>
-        </div> 
+      <div id="hero-header" class="flex justify-center align-center">
+        <h1 id="header">
+          <span>Little.</span>
+          <span id="cursive">Sunshine.</span>
+          <span>Sitters.</span>
+        </h1>
+      </div>
     </section>
     <section id="form-info" class="grid">
-        <div id="banner1">
-            <div class="overlay flex-col justify-center align-center">
-                <h2>Book a Siiter</h2>
-                <img src="images/logos/arrow-right.png" alt="">
-
-            </div>
+      <div id="banner1">
+        <div class="overlay flex-col justify-center align-center">
+          <h2>Book a Sitter</h2>
+          <img src="images/logos/arrow-right.png" alt="" />
         </div>
+      </div>
 
-        <form action="" id="Appointment-Form" class="flex-col">
-            <p id="error-msg" class="hide">Empty Fields</p>
-            <div id="parents-section" class="flex-col">
-                <label for="">Parents Details:</label>
-                <br>
-                <input type="text" name="" placeholder="Enter Full Name" id="guardian-name" oninput="emptyFields(event)">
-                <br>
-                <p class="hide">Enter a valid number</p>
-                <input type="text" name="" placeholder="Phone Number" id="phone" oninput="emptyFields(event)">
-                <br>
-                <p class="hide">Enter a valid Email Address</p>
-                <input type="text" name="" placeholder="Email" id="email" oninput="emptyFields(event)">
-            </div>
-            <br>
-            <div id="child-section" class="flex-col">
-                <label for="">Child's Details:</label>
-                <br>
-                <input type="text" name="" placeholder="Enter Full Name" id="child-name" oninput="emptyFields(event)">
-                <br>
-                <select name="" id="age" oninput="emptyFields(event)">
-                    <option value="">Select Age</option>
-                    <option value="0">Below 1 years</option>
-                    <option value="1">1 year</option>
-                    <option value="2">2 years</option>
-                    <option value="3">3 years</option>
-                    <option value="4">4 years</option>
-                    <option value="5">5 years</option>
-                    <option value="6">6 years</option>
-                    <option value="7">7 years</option>
-                    <option value="8">8 years</option>
-                    <option value="9">9 years</option>
-                    <option value="10">10 years</option>
-                    <option value="11">11 years</option>
-                    <option value="12">12 years</option>
-                    <option value="13">13 years</option>
-                    <option value="14">Above 13 years</option>
-                </select>
-
-            </div>
-            <br>
-            <div id="service-details">
-                <label for="">Select Date and Time for Service:</label>
-                <br><br>
-                <input type="date" name="" id="date" oninput="emptyFields(event)"> <input type="time" id="time" name="time" oninput="emptyFields(event)">
-                <br><br>
-                <select name="" id="duration" oninput="emptyFields(event)">
-                    <option value="">Select duration for service</option>
-                    <option value="1 week">1 week</option>
-                    <option value="2 weeks">2 weeks</option>
-                    <option value="3 weeks">3 weeks</option>
-                    <option value="1 month">1 month</option>
-                </select>
-                <br><br>
-                <select name="" id="service-type" oninput="emptyFields(event)">
-                    <option value="">Select service type</option>
-                    <option value="Day">Day time</option>
-                    <option value="Evening">Evening</option>
-                    <option value="Overnight">Overnight</option>
-                </select>
-            </div>
-            <br>
-            <button class="hide" id="submit" type="button">Check Avaliable Sitters</button>
-            <br>
-            <img src="images/logos/wait.png" alt="wait" class="hide" id="hourglass">
-        </form>
+      <form action="" id="Appointment-Form" class="flex-col">
+        <p id="error-msg" class="hide">Empty Fields</p>
+        <div id="parents-section" class="flex-col">
+          <label for="">Parents Details:</label>
+          <br />
+          <input
+            type="text"
+            name=""
+            placeholder="Enter Full Name"
+            id="guardian-name"
+            oninput="emptyFields(event)"
+          />
+          <br />
+          <p class="hide">Enter a valid number</p>
+          <input
+            type="text"
+            name=""
+            placeholder="Phone Number"
+            id="phone"
+            oninput="emptyFields(event)"
+          />
+          <br />
+          <p class="hide">Enter a valid Email Address</p>
+          <input
+            type="text"
+            name=""
+            placeholder="Email"
+            id="email"
+            oninput="emptyFields(event)"
+          />
+        </div>
+        <br />
+        <div id="child-section" class="flex-col">
+          <label for="">Child's Details:</label>
+          <br />
+          <input
+            type="text"
+            name=""
+            placeholder="Enter Full Name"
+            id="child-name"
+            oninput="emptyFields(event)"
+          />
+          <br />
+          <select name="" id="age" oninput="emptyFields(event)">
+            <option value="">Select Age</option>
+            <option value="0">Below 1 years</option>
+            <option value="1">1 year</option>
+            <option value="2">2 years</option>
+            <option value="3">3 years</option>
+            <option value="4">4 years</option>
+            <option value="5">5 years</option>
+            <option value="6">6 years</option>
+            <option value="7">7 years</option>
+            <option value="8">8 years</option>
+            <option value="9">9 years</option>
+            <option value="10">10 years</option>
+            <option value="11">11 years</option>
+            <option value="12">12 years</option>
+            <option value="13">13 years</option>
+            <option value="14">Above 13 years</option>
+          </select>
+        </div>
+        <br />
+        <div id="service-details">
+          <label for="">Select Date and Time for Service:</label>
+          <br /><br />
+          <input type="date" name="" id="date" oninput="emptyFields(event)" />
+          <input
+            type="time"
+            id="time"
+            name="time"
+            oninput="emptyFields(event)"
+          />
+          <br /><br />
+          <select name="" id="duration" oninput="emptyFields(event)">
+            <option value="">Select duration for service</option>
+            <option value="1 week">1 week</option>
+            <option value="2 weeks">2 weeks</option>
+            <option value="3 weeks">3 weeks</option>
+            <option value="1 month">1 month</option>
+          </select>
+          <br /><br />
+          <select name="" id="service-type" oninput="emptyFields(event)">
+            <option value="">Select service type</option>
+            <option value="Day">Day time</option>
+            <option value="Evening">Evening</option>
+            <option value="Overnight">Overnight</option>
+          </select>
+        </div>
+        <br />
+        <button class="hide" id="submit" type="button">
+          Check Avaliable Sitters
+        </button>
+        <br />
+        <img
+          src="images/logos/wait.png"
+          alt="wait"
+          class="hide"
+          id="hourglass"
+        />
+      </form>
     </section>
     <section id="sitters" class="hide">
-        <h1>View Our Avaliable Sitters</h1>
-        <p id="service-selected"></p>
-        <div id="sitters-grid" class="grid-3fr gap">
-            <!-- Insert Grid items -->
-        </div>
+      <h1>View Our Avaliable Sitters</h1>
+      <p id="service-selected"></p>
+      <div id="sitters-grid" class="grid-3fr gap">
+        <!-- Insert Grid items -->
+      </div>
     </section>
-<footer class="grid-3fr">
-    <div class="flex-col align-center">
-        <img src="images/logos/logo.png" alt="" id="footer-logo">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, quod!</p>
+    <footer class="grid-3fr">
+      <div class="flex-col align-center">
+        <img src="images/logos/logo.png" alt="" id="footer-logo" />
+        <p>
+          Nurturing happy hearts, one child at a time!
+        </p>
         <div class="socials flex gap justify-center align-center">
-            <img src="images/logos/facebook.png" alt="">
-            <img src="images/logos/instagram.png" alt="">
-            <img src="images/logos/twitter.png" alt="">
+          <img src="images/logos/facebook.png" alt="" />
+          <img src="images/logos/instagram.png" alt="" />
+          <img src="images/logos/twitter.png" alt="" />
         </div>
         <p>&copy; CopyRight Little Sunshine Sitters 2024</p>
-    </div>
-    <div id="contacts-info" class="flex-col gap">
+      </div>
+      <div id="contacts-info" class="flex-col gap">
         <p>Our Contacts</p>
-        <div><img src="images/logos/viber.png" alt="">
-            &nbsp;&nbsp;
-            <span>Call: +(123) 456 789</span></div>
-        <div><img src="images/logos/email.png" alt="">
-            &nbsp;&nbsp;
-            <span>Email: littlesunshinesitter@somemail.com</span></div>
-        <div><img src="images/logos/pin.png" alt="">
-            &nbsp;&nbsp;
-            <span>Visit Us: 123 Somewhere, SomeCity SomePlace</span></div>
-    </div>
-    <div id="opening-hours">
+        <div>
+          <img src="images/logos/viber.png" alt="" />
+          &nbsp;&nbsp;
+          <span>Call: +(123) 456 789</span>
+        </div>
+        <div>
+          <img src="images/logos/email.png" alt="" />
+          &nbsp;&nbsp;
+          <span>Email: littlesunshinesitter@somemail.com</span>
+        </div>
+        <div>
+          <img src="images/logos/pin.png" alt="" />
+          &nbsp;&nbsp;
+          <span>Visit Us: 123 Somewhere, SomeCity SomePlace</span>
+        </div>
+      </div>
+      <div id="opening-hours">
         <p>Opening Hours</p>
         <div id="opening-hours-info" class="grid-3fr">
-            <div>
-                <ul>
-                    <li>Mon-Fri</li>
-                    <li>Saturday</li>
-                    <li>Sunday</li>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <li>.......</li>
-                    <li>.......</li>
-                    <li>.......</li>
-                </ul>
-            </div>
-            <div>
-                <ul>
-                    <li>8am - 7pm</li>
-                    <li>9am - 5pm</li>
-                    <li>Closed</li>
-                </ul>
-            </div>
+          <div>
+            <ul>
+              <li>Mon-Fri</li>
+              <li>Saturday</li>
+              <li>Sunday</li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li>.......</li>
+              <li>.......</li>
+              <li>.......</li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li>8am - 7pm</li>
+              <li>9am - 5pm</li>
+              <li>Closed</li>
+            </ul>
+          </div>
         </div>
-    </div>
-
-</footer>
-
-
+      </div>
+    </footer>
 
     <script src=" js/script.js "></script>
-</body>
-
-</html>
-
+  </body>
 </html>

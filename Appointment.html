@@ -22,22 +22,29 @@
   <body>
     <nav class="flex align-center">
       <div id="logo"><img src="images/logos/logo.png" alt="" /></div>
-      <div class="flex gap">
+
+      <div class="nav-items flex gap">
+        <div id="collapsed-menu" class="hide flex justify-center align-center">
+          <img src="images/logos/menu.png" alt="" />
+        </div>
         <ul id="links" class="flex">
           <a href="index.html"><li>Home</li></a>
           <a href="index.html#form-info"><li>Book An Appointment</li></a>
         </ul>
-        <div class="flex justify-center align-center">
-          <img src="images/logos/viber.png" alt="" />&nbsp;&nbsp;
-          <span>Call</span>
-          <br />
+        <div class="flex-col align-start">
+          <div class="flex justify-center align-center">
+            <img src="images/logos/viber.png" alt="" />&nbsp;&nbsp;
+            <span>Call</span>
+          </div>
           <span>+(123) 456 789</span>
         </div>
-        <div class="flex justify-center align-center">
-          <img src="images/logos/pin.png" alt="" />&nbsp;&nbsp;<span
-            >Address</span
-          >
-          <br />
+        <div class="flex-col align-start">
+          <div class="flex justify-center align-center">
+            <img src="images/logos/pin.png" alt="" />&nbsp;&nbsp;<span
+              >Address</span
+            >
+            <br />
+          </div>
           <span>123 Somewhere, SomeCity SomePlace</span>
         </div>
       </div>
@@ -45,9 +52,7 @@
 
     <section id="appointment-details">
       <h1 id="header2">Confirm Booking details</h1>
-      <p>
-        Below are your booking details:
-      </p>
+      <p>Below are your booking details:</p>
 
       <div id="booking-details" class="flex-col">
         <div id="client-info">
@@ -110,30 +115,35 @@
         </div>
 
         <div id="Costing info">
-            <h3 class="header3">Cost Breakdown</h3>
-           
-              <div class="flex-col gap">
-                <div>
-                  <span class="bold">Type of Service: </span
-                  ><span id="cost-serviceinfo"></span>
-                </div>
-                <div>
-                  <span class="bold">Child's Age: </span
-                  ><span id="cost-childinfo"></span>
-                </div>
-                <div>
-                    <span class="bold">Duration: </span
-                    ><span id="cost-durationinfo"></span>
-                  </div>
-                  <div id="urgency"></div>
-                  <div>
-                    <span class="bold">Total cost: </span
-                    ><span id="total-cost"></span>
-                  </div>
-              </div>           
+          <h3 class="header3">Cost Breakdown</h3>
+
+          <div class="flex-col gap">
+            <div>
+              <span class="bold">Type of Service: </span
+              ><span id="cost-serviceinfo"></span>
+            </div>
+            <div>
+              <span class="bold">Child's Age: </span
+              ><span id="cost-childinfo"></span>
+            </div>
+            <div>
+              <span class="bold">Duration: </span
+              ><span id="cost-durationinfo"></span>
+            </div>
+            <div id="urgency"></div>
+            <div>
+              <span class="bold">Total cost: </span
+              ><span id="total-cost"></span>
+            </div>
           </div>
-          <button id="confirm-booking">Confirm Booking</button>
-          <img src="images/logos/wait.png" alt="wait" class="hide" id="hourglass">
+        </div>
+        <button id="confirm-booking">Confirm Booking</button>
+        <img
+          src="images/logos/wait.png"
+          alt="wait"
+          class="hide"
+          id="hourglass"
+        />
       </div>
     </section>
 
@@ -141,8 +151,7 @@
       <div class="flex-col align-center">
         <img src="images/logos/logo.png" alt="" id="footer-logo" />
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt,
-          quod!
+          Nurturing happy hearts, one child at a time!
         </p>
         <div class="socials flex gap justify-center align-center">
           <img src="images/logos/facebook.png" alt="" />
