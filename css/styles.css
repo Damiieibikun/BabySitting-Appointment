@@ -192,7 +192,8 @@ label {
 
 #hourglass {
   align-self: center;
-  animation: spin 0.7s linear;
+  animation: spin 0.7s infinite;
+  -webkit-animation: spin 0.7s infinite;
 }
 
 @keyframes spin {
