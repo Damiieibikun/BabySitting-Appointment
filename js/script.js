@@ -26,6 +26,17 @@ let submit = document.getElementById("submit");
 let hourglass = document.getElementById("hourglass");
 let sittersSection = document.getElementById("sitters");
 
+// change input fields of names to capital case
+function capitalCase() {
+    if (this.value) {
+        let properText = this.value[0].toUpperCase() +
+            this.value.slice(1);
+        this.value = properText
+    }
+}
+guardianName.addEventListener('input', capitalCase)
+childName.addEventListener('input', capitalCase)
+
 //Validate for empty strings
 function emptyFields(event) {
   if (event.target.value === "") {
@@ -44,8 +55,8 @@ function emptyFields(event) {
 //validte values inputed
 let validNum = false;
 let validEmail = false;
-const numRegex = /^\s*(\d+(\.\d+)?)(\s*,\s*(\d+(\.\d+)?))*\s*$/;
-const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+const numRegex = /^[+\d]?(?:\d[-.\s()]?){7,14}\d$/;
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|org|net|edu|gov|mil|int|gov.ng|[a-zA-Z]{2})$/;
 
 // Keep track of validated email and number
 function validateFields() {
@@ -335,8 +346,7 @@ function clicked(event) {
 }
 
 //////////////////////////////////////////////////////////
-//TODO: Check for a more accurate regex expression for email
+//TODO: 
 //Still look for another method to clear form on load or to validate inputed enteries on load
-// check how to remove hourglass after animationon for email
-//Still look for another method to clear form on load or to validate inputed enteries on load
-// check how to remove hourglass after animation
+
+

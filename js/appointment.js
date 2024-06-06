@@ -85,22 +85,28 @@ function durationRate() {
     rate *= 7;
     document.getElementById(
       "cost-durationinfo"
-    ).innerHTML = `<b> ${appointmentDetails.duration}</b>: <b>$${rate}</b>`;
+    ).innerHTML = `<b> ${appointmentDetails.duration}</b>: charge per day (7 days)`;
   } else if (appointmentDetails.duration === "2 weeks") {
     rate *= 14;
     document.getElementById(
       "cost-durationinfo"
-    ).innerHTML = `<b> ${appointmentDetails.duration}</b>: <b>$${rate}</b>`;
+    ).innerHTML = `<b> ${appointmentDetails.duration}</b>: charge per day (14 days)`;
   } else if (appointmentDetails.duration === "3 weeks") {
     rate *= 21;
     document.getElementById(
       "cost-durationinfo"
-    ).innerHTML = `<b> ${appointmentDetails.duration}</b>: <b>$${rate}</b>`;
+    ).innerHTML = `<b> ${appointmentDetails.duration}</b>: charge per day (21 days)`;
   } else if (appointmentDetails.duration === "1 month") {
     rate *= 30;
     document.getElementById(
       "cost-durationinfo"
-    ).innerHTML = `<b> ${appointmentDetails.duration}</b>: <b>$${rate}</b>`;
+    ).innerHTML = `<b> ${appointmentDetails.duration}</b>: charge per day (30 days)`;
+  }
+  else{
+    rate = rate;
+    document.getElementById(
+      "cost-durationinfo"
+    ).innerHTML = `<b> ${appointmentDetails.duration}</b>: Daily charge of <b>$${rate}</b>`;
   }
 
   return rate;
@@ -128,6 +134,7 @@ function urgencyFee() {
   return rate;
 }
 
+(appointmentDetails.duration === 'N/A') ? document.getElementById("total-cost").innerHTML = `<b>$${urgencyFee()}</b> daily charge`:
 document.getElementById("total-cost").innerHTML = `<b>$${urgencyFee()}</b>`;
 
 let confirmBooking = document.getElementById("confirm-booking");

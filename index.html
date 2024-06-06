@@ -31,14 +31,14 @@
           <a href="index.html"><li>Home</li></a>
           <a href="index.html#form-info"><li>Book An Appointment</li></a>
         </ul>
-        <div class="flex-col align-start">
+        <div class="flex-col align-start padding-lr">
           <div class="flex justify-center align-center">
             <img src="images/logos/viber.png" alt="" />&nbsp;&nbsp;
             <span>Call</span>
           </div>
           <span>+(123) 456 789</span>
         </div>
-        <div class="flex-col align-start">
+        <div class="flex-col align-start padding-lr">
           <div class="flex justify-center align-center">
             <img src="images/logos/pin.png" alt="" />&nbsp;&nbsp;<span
               >Address</span
@@ -79,11 +79,11 @@
             oninput="emptyFields(event)"
           />
           <br />
-          <p class="hide">Enter a valid number</p>
+          <p class="hide">Enter a valid phone number</p>
           <input
             type="text"
             name=""
-            placeholder="Phone Number"
+            placeholder="Phone Number... example: +123-456-7890"
             id="phone"
             oninput="emptyFields(event)"
           />
@@ -142,6 +142,7 @@
           <br /><br />
           <select name="" id="duration" oninput="emptyFields(event)">
             <option value="">Select duration for service</option>
+            <option value="N/A">Not Applicable</option>
             <option value="1 week">1 week</option>
             <option value="2 weeks">2 weeks</option>
             <option value="3 weeks">3 weeks</option>

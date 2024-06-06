@@ -79,6 +79,9 @@ nav {
   background-color: #c99e9dab;
   padding: 10px 0;
 }
+.padding-lr{
+padding: 0 20px;
+}
 
 /* hero */
 #hero {
@@ -317,6 +320,7 @@ label {
   width: 300px;
   height: 300px;
   align-self: center;
+  justify-self: center;
 }
 
 .waitSitters {
@@ -373,7 +377,7 @@ label {
   font-weight: 600;
   transition: 0.4s all;
   font-family: cursive;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
 #confirm-booking:hover {
@@ -470,7 +474,7 @@ footer p {
     flex-direction: column;
   }
   .nav-items {
-    width: 150px;
+    width: 180px;
     max-height: 35px;
     overflow: hidden;
     position: relative;
