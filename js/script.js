@@ -327,7 +327,7 @@ function bookSitter() {
 
     let p0 = document.createElement("p");
     p0.id = "no-sitter";
-    p0.innerText = `Sorry We currently dont have ${serviceSelected}sitters avaliable for the selected time. Please check again soon!`;
+    p0.innerText = `Sorry We currently dont have ${serviceSelected}sitters avaliable for the selected time. Please check again soon or select another service!`;
     p0.style.fontWeight = 400;
     sitterItem.appendChild(p0);
     sittersGrid.appendChild(sitterItem);
