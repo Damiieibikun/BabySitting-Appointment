@@ -494,6 +494,9 @@ footer p {
 }
 
 @media screen and (max-width: 768px) {
+  #hero{
+    height: 60vh;
+  }
   #client-infogrid.grid-2fr,
   #service-infogrid.grid-2fr {
     grid-template-columns: 1fr;
@@ -510,6 +513,7 @@ footer p {
 }
 
 @media screen and (max-width: 760px) {
+ 
   #form-info {
     grid-template-columns: 1fr;
   }

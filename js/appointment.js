@@ -53,7 +53,7 @@ function serviceCharge() {
     ).innerHTML = `<b>${appointmentDetails.serviceType}(10pm - 8am)</b>: 1.5 X Base Rate ($5 per hour): <b>$${rate}</b>`;
   }
 
-  return rate;
+  return Math.round(rate);
 }
 
 function childRate() {
@@ -76,7 +76,7 @@ function childRate() {
     ).innerHTML = `<b> Over 5 years</b>: 1x Service Rate: <b>$${rate}</b>`;
   }
 
-  return rate;
+  return Math.round(rate);
 }
 
 function durationRate() {
@@ -109,7 +109,7 @@ function durationRate() {
     ).innerHTML = `<b> ${appointmentDetails.duration}</b>: Daily charge of <b>$${rate}</b>`;
   }
 
-  return rate;
+  return Math.round(rate);
 }
 
 // urgency rate for impromtu booking
@@ -130,7 +130,7 @@ function urgencyFee() {
   } else {
     rate = rate;
   }
-  return rate;
+  return Math.round(rate);
 }
 
 (appointmentDetails.duration === 'N/A') ? document.getElementById("total-cost").innerHTML = `<b>$${urgencyFee()}</b> daily charge`:
