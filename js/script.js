@@ -345,8 +345,5 @@ function clicked(event) {
   }, 700);
 }
 
-//////////////////////////////////////////////////////////
-//TODO: 
-//Still look for another method to clear form on load or to validate inputed enteries on load
 
 

@@ -33,7 +33,7 @@ document.getElementById("time-selected").innerText = appointmentDetails.time;
 document.getElementById("duration-selected").innerText =
   appointmentDetails.duration;
 
-// cost breakdown
+// calculations and cost breakdown
 function serviceCharge() {
   let rate = null;
   if (appointmentDetails.serviceType === "Day") {
@@ -112,8 +112,7 @@ function durationRate() {
   return rate;
 }
 
-// console.log(durationRate());
-
+// urgency rate for impromtu booking
 function urgencyFee() {
   let rate = durationRate();
 
