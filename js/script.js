@@ -91,7 +91,7 @@ email.addEventListener("input", function () {
 
 // add event listener to document and check for empty fields
 
-window.addEventListener("mouseup", function () {
+window.addEventListener("mouseover", function () {
   let inputs = document.querySelectorAll("input");
   let select = document.querySelectorAll("select");
   //create a list for inputs and select element
