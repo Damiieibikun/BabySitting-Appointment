@@ -91,7 +91,7 @@ email.addEventListener("input", function () {
 
 // add event listener to document and check for empty fields
 
-window.addEventListener("click", function () {
+window.addEventListener("mouseup", function () {
   let inputs = document.querySelectorAll("input");
   let select = document.querySelectorAll("select");
   //create a list for inputs and select element
@@ -153,6 +153,8 @@ window.addEventListener("click", function () {
       }, 700);
     });
   } else {
+    submit.classList.add("hide")
+    sittersSection.classList.add("hide")
     console.log("Number of empty fields: " + numOfEmpty);
   }
 });
